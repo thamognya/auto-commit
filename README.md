@@ -12,10 +12,10 @@ concurrency:
   group: mirror-git-repo
 
 jobs:
-  mirror-git-repo:
+  auto-commit:
     runs-on: ubuntu-latest
     steps:
-      - uses: ThamognyaKodi/mirror-git-repo@0.0.1
+      - uses: ThamognyaKodi/auto-commit@0.0.1 
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           EMAIL: ${{ github.event.pusher.email }}
