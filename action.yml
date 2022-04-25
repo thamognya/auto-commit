@@ -1,4 +1,4 @@
-name: 'auto-commit'
+name: 'auto-git-repo-commiter'
 author: 'Thamognya Kodi'
 description: 'Action for auto-commiting.'
 branding:
