@@ -1,16 +1,12 @@
-name: 'mirror-git-repo'
+name: 'auto-commit'
 author: 'Thamognya Kodi'
-description: 'Action for mirroring a repository in another location using SSH.'
+description: 'Action for auto-commiting.'
 branding:
-  icon: 'copy'
+  icon: 'git-commit'
   color: 'red'
 inputs:
   source-repo:
     description: 'SSH URL of the source repo.'
-    required: true
-    default: ''
-  destination-repo:
-    description: 'SSH URL of the destination repo.'
     required: true
     default: ''
 runs:
@@ -18,5 +14,3 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.source-repo }}
-    - ${{ inputs.destination-repo }}
-    - ${{ inputs.dry-run }}
